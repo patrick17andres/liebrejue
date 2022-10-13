@@ -55,14 +55,7 @@ export default function PlayerMusic() {
   }
   return (
     <div className='text-white'>
-      <ReactJkMusicPlayer
-        className='float-none'
-        {...options}
-        audioLists={audioList}
-        mobileMediaQuery="(max-width: 1024px)"
-        showMediaSession
 
-      />
     </div>
   )
 }

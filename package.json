@@ -12,7 +12,7 @@
     "next": "12.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-jinke-music-player": "4.24.2"
+    "react-jinke-music-player": "4.21.2"
   },
   "devDependencies": {
     "@types/sortablejs": "^1.15.0",
