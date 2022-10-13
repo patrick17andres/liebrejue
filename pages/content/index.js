@@ -1,19 +1,22 @@
 import dynamic from 'next/dynamic'
 import InicioRadio from "./grups/inicio-radio";
 import Extras from "./grups/extras";
+import { Suspense } from 'react'
+const PlayerMusic = dynamic(() => import('../components/musicplayer'), {
+    ssr: false,
+})
 export default function indexContent() {
-    const PlayerMusic = dynamic(() => import('./accesories/musicplayer'), {
-        ssr: false,
-    })
     return (
         <div>
-            <PlayerMusic />
+            <Suspense fallback={`Loading...`}>
+                <PlayerMusic />
+            </Suspense>
             <div className="">
                 <InicioRadio />
             </div>
             <div className="">
                 <Extras />
-            </div>            
+            </div>
         </div>
     )
 } 
